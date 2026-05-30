@@ -123,7 +123,7 @@ def fetch_transcript(video_id: str) -> Tuple[str, str]:
     """
     try:
         # List all transcripts to evaluate languages
-        transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
+        transcript_list = YouTubeTranscriptApi().list(video_id)
         
         # Try to find English first (either manual or generated)
         try:

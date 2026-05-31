@@ -141,8 +141,12 @@ def fetch_transcript(video_id: str) -> Tuple[str, str]:
         plain_words = []
         
         for entry in entries:
-            start_time = entry['start']
-            text = entry['text']
+            if isinstance(entry, dict):
+                start_time = entry.get('start', 0.0)
+                text = entry.get('text', '')
+            else:
+                start_time = getattr(entry, 'start', 0.0)
+                text = getattr(entry, 'text', '')
             
             # Formatting timestamp
             hours = int(start_time // 3600)

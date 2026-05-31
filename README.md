@@ -76,4 +76,4 @@ Open your browser and navigate to the printed local URL:
 
 Once the app is running, you can open the **Advanced Settings** accordion on the left sidebar to:
 *   **Override API Key**: Change or paste a Gemini API Key directly in the UI without restarting the server.
-*   **Select Processing Model**: Choose between `gemini-1.5-flash` (fast, efficient, recommended) and `gemini-1.5-pro` (deep, multi-step analytical reasoning).
+*   **Select Processing Model**: Choose between `gemini-3.5-flash` (fast, efficient, recommended) and `gemini-3.5-pro` (deep, multi-step analytical reasoning).

@@ -778,8 +778,8 @@ with gr.Blocks() as app:
                         type="password"
                     )
                     model_dropdown = gr.Dropdown(
-                        choices=["gemini-1.5-flash", "gemini-1.5-pro"],
-                        value="gemini-1.5-flash",
+                        choices=["gemini-3.5-flash", "gemini-3.5-pro", "gemini-2.5-flash", "gemini-2.5-pro", "gemini-2.0-flash"],
+                        value="gemini-3.5-flash",
                         label="AI Processing Model"
                     )
             

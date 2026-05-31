@@ -21,6 +21,7 @@ import os
 import re
 import json
 import urllib.request
+import tempfile
 from typing import Tuple, Dict, Any, List
 from typing_extensions import TypedDict
 from dotenv import load_dotenv
@@ -586,7 +587,8 @@ def run_analysis(url: str, custom_api_key: str, model_name: str) -> Tuple[str, g
     """
     
     # Save transcript to temp file to support downloading
-    temp_transcript_path = "/tmp/transcript.txt"
+    temp_dir = tempfile.gettempdir()
+    temp_transcript_path = os.path.join(temp_dir, f"transcript_{video_id}.txt")
     try:
         with open(temp_transcript_path, "w") as f:
             f.write(formatted_transcript)
